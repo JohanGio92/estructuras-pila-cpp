@@ -63,7 +63,7 @@ parametrizable (*template*): `Pila<T>`.
 
 1. Definición de la interfaz de la clase `Pila`.
 
-* `Pila.h` : [Pila.h](../punto-01/src/Pila.h)
+* `Pila.h`: [Pila.h](../punto-01/src/Pila.h)
 
 
 
