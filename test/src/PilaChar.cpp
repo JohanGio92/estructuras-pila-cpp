@@ -84,4 +84,17 @@ TEST( PilaCharTest, obtenerTopeNoModificaLaPila ) {
     ASSERT_TRUE( pila.estaVacia() );
 }
 
+TEST( PilaCharTest, desapilarConLaPilaVaciaLanzaExcepcion ) {
+
+    Pila<char> pila;
+
+    ASSERT_THROW(pila.desapilar(), std::string) << "Pila vacía";
+}
+
+TEST( PilaCharTest, obtenerTopeConLaPilaVaciaLanzaExcepcion ) {
+
+    Pila<char> pila;
+
+    ASSERT_THROW(pila.obtenerTope(), std::string) << "Pila vacía";
+}
 

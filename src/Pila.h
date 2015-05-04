@@ -2,6 +2,7 @@
 #define PILA_H_
 
 #include "Nodo.h"
+#include <string>
 
 /*
  * Una Pila es una estructura dinámica de datos organizada de acuerdo al
@@ -89,6 +90,10 @@ T Pila<T>::desapilar() {
         /* devuelve el elemento y libera los recursos asociados */
         elemento = topeAnterior->obtenerDato();
         delete topeAnterior;
+
+    } else {
+
+        throw std::string("No se puede desapilar un elemento, la pila esta vacía.");
     }
 
     return elemento;
@@ -103,6 +108,10 @@ T Pila<T>::obtenerTope() {
     if (! this->estaVacia()) {
 
         elemento = this->tope->obtenerDato();
+
+    } else {
+
+        throw std::string("No se puede obtener el tope, la pila está vacía.");
     }
 
     return elemento;
