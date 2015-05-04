@@ -65,6 +65,11 @@ parametrizable (*template*): `Pila<T>`.
 
 * `Pila.h`: [Pila.h](../punto-01/src/Pila.h)
 
+2. Implementación de la clase `Pila` basada en un arreglo.
+
+* `Pila.h`: [Pila.h](../punto-02/src/Pila.h)
+
+* `Pila.cpp`: [Pila.cpp](../punto-02/src/Pila.cpp)
 
 
 [pila]: http://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Pila.svg/391px-Pila.svg.png "Pila"
