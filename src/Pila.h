@@ -12,11 +12,11 @@
  * Sólo permite el acceso al elemento que denomina tope.
  *
  */
-class Pila {
+template<class T> class Pila {
 
     private:
 
-        Nodo* tope;
+        Nodo<T>* tope;
 
     public:
 
@@ -33,19 +33,19 @@ class Pila {
         /*
          * post: agrega 'elemento' en el tope de la Pila.
          */
-        void apilar(char elemento);
+        void apilar(T elemento);
 
         /*
          * pre : la Pila no está vacía.
          * post: remueve el tope de la Pila y lo devuelve.
          */
-        char desapilar();
+        T desapilar();
 
         /*
          * pre : la Pila no está vacía.
          * post: devuelve el tope de la Pila.
          */
-        char obtenerTope();
+        T obtenerTope();
 
         /*
          * post: remueve todos los elementos y libera
@@ -54,6 +54,68 @@ class Pila {
         ~Pila();
 };
 
+template<class T>
+Pila<T>::Pila() {
+
+    this->tope = NULL;
+}
+
+template<class T>
+bool Pila<T>::estaVacia() {
+
+    return (this->tope == NULL);
+}
+
+template<class T>
+void Pila<T>::apilar(T elemento) {
+
+    Nodo<T>* nuevoTope = new Nodo<T>(elemento);
+    nuevoTope->cambiarSiguiente(this->tope);
+    this->tope = nuevoTope;
+}
+
+template<class T>
+T Pila<T>::desapilar() {
+
+    /* si no existen elementos devuelve basura */
+    T elemento;
+
+    if (! this->estaVacia()) {
+
+        /* remueve el tope de la estructura */
+        Nodo<T>* topeAnterior = this->tope;
+        this->tope = topeAnterior->obtenerSiguiente();
+
+        /* devuelve el elemento y libera los recursos asociados */
+        elemento = topeAnterior->obtenerDato();
+        delete topeAnterior;
+    }
+
+    return elemento;
+}
+
+template<class T>
+T Pila<T>::obtenerTope() {
+
+    /* si no existen elementos devuelve basura */
+    T elemento;
+
+    if (! this->estaVacia()) {
+
+        elemento = this->tope->obtenerDato();
+    }
+
+    return elemento;
+}
+
+template<class T>
+Pila<T>::~Pila() {
+
+    while (! this->estaVacia()) {
+
+        this->desapilar();
+    }
+}
 
 
 #endif /* PILA_H_ */

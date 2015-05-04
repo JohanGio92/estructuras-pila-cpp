@@ -2,20 +2,16 @@
 #include "gtest/gtest.h"
 #include "Pila.h"
 
-/* hack/truco para poder correr las pruebas sin copiar los fuentes */
-#include "Pila.cpp"
-#include "Nodo.cpp"
-
 TEST( PilaCharTest, crear ) {
 
-    Pila pila;
+    Pila<char> pila;
 
     ASSERT_TRUE( pila.estaVacia() );
 }
 
 TEST( PilaCharTest, apilarUnUnicoElemento ) {
 
-    Pila pila;
+    Pila<char> pila;
 
     pila.apilar('D');
 
@@ -24,7 +20,7 @@ TEST( PilaCharTest, apilarUnUnicoElemento ) {
 
 TEST( PilaCharTest, apilarMultiplesElementos ) {
 
-    Pila pila;
+    Pila<char> pila;
 
     pila.apilar('O');
     pila.apilar('P');
@@ -33,9 +29,9 @@ TEST( PilaCharTest, apilarMultiplesElementos ) {
     ASSERT_FALSE( pila.estaVacia() );
 }
 
-TEST( PilaCharTestpilaDeCaracteres, desapilarElUnicoElementoApilado ) {
+TEST( PilaCharTest, desapilarElUnicoElementoApilado ) {
 
-    Pila pila;
+    Pila<char> pila;
 
     pila.apilar('S');
     const char elemento = pila.desapilar();
@@ -46,7 +42,7 @@ TEST( PilaCharTestpilaDeCaracteres, desapilarElUnicoElementoApilado ) {
 
 TEST( PilaCharTest, desapilaTresElementosCumplindoFIFO ) {
 
-    Pila pila;
+    Pila<char> pila;
 
     pila.apilar('A');
     pila.apilar('B');
@@ -63,7 +59,7 @@ TEST( PilaCharTest, desapilaTresElementosCumplindoFIFO ) {
 
 TEST( PilaCharTest, obtenerTope ) {
 
-    Pila pila;
+    Pila<char> pila;
 
     pila.apilar('X');
     pila.apilar('Y');
@@ -75,7 +71,7 @@ TEST( PilaCharTest, obtenerTope ) {
 
 TEST( PilaCharTest, obtenerTopeNoModificaLaPila ) {
 
-    Pila pila;
+    Pila<char> pila;
 
     pila.apilar('X');
 
