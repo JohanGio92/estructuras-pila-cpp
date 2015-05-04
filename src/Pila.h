@@ -1,7 +1,7 @@
 #ifndef PILA_H_
 #define PILA_H_
 
-#define MAXIMO 100000
+#include "Nodo.h"
 
 /*
  * Una Pila es una estructura dinámica de datos organizada de acuerdo al
@@ -16,9 +16,7 @@ class Pila {
 
     private:
 
-        char elementos[MAXIMO];
-
-        int tope;
+        Nodo* tope;
 
     public:
 

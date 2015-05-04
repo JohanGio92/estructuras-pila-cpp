@@ -4,22 +4,19 @@
 
 Pila::Pila() {
 
-    this->tope = -1;
+    this->tope = NULL;
 }
 
 bool Pila::estaVacia() {
 
-    return (this->tope < 0);
+    return (this->tope == NULL);
 }
 
 void Pila::apilar(char elemento) {
 
-    if (this->tope < MAXIMO - 1) {
-
-        this->tope++;
-
-        this->elementos[this->tope] = elemento;
-    }
+    Nodo* nuevoTope = new Nodo(elemento);
+    nuevoTope->cambiarSiguiente(this->tope);
+    this->tope = nuevoTope;
 }
 
 char Pila::desapilar() {
@@ -28,9 +25,13 @@ char Pila::desapilar() {
 
     if (! this->estaVacia()) {
 
-        elemento = this->elementos[this->tope];
+        /* remueve el tope de la estructura */
+        Nodo* topeAnterior = this->tope;
+        this->tope = topeAnterior->obtenerSiguiente();
 
-        this->tope--;
+        /* devuelve el elemento y libera los recursos asociados */
+        elemento = topeAnterior->obtenerDato();
+        delete topeAnterior;
     }
 
     return elemento;
@@ -42,7 +43,7 @@ char Pila::obtenerTope() {
 
     if (! this->estaVacia()) {
 
-        elemento = this->elementos[this->tope];
+        elemento = this->tope->obtenerDato();
     }
 
     return elemento;
@@ -50,4 +51,8 @@ char Pila::obtenerTope() {
 
 Pila::~Pila() {
 
+    while (! this->estaVacia()) {
+
+        this->desapilar();
+    }
 }

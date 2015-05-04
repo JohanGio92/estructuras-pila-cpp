@@ -2,8 +2,9 @@
 #include "gtest/gtest.h"
 #include "Pila.h"
 
-/* hack/truco para poder correr las pruebas sin copiar el fuente */
+/* hack/truco para poder correr las pruebas sin copiar los fuentes */
 #include "Pila.cpp"
+#include "Nodo.cpp"
 
 TEST( PilaCharTest, crear ) {
 
