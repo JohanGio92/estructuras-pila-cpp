@@ -9,7 +9,7 @@
  *
  * El último elemento en entrar es el primer elemento en salir.
  *
- * Sólo permite el acceso al elemento que denomina tope..
+ * Sólo permite el acceso al elemento que denomina tope.
  *
  */
 class Pila {

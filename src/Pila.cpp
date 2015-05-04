@@ -1,5 +1,7 @@
 #include "Pila.h"
 
+#define ELEMENTO_INVALIDO 0;
+
 Pila::Pila() {
 
     this->tope = -1;
@@ -22,7 +24,7 @@ void Pila::apilar(char elemento) {
 
 char Pila::desapilar() {
 
-    char elemento = ' ';
+    char elemento = ELEMENTO_INVALIDO;
 
     if (! this->estaVacia()) {
 
@@ -36,7 +38,7 @@ char Pila::desapilar() {
 
 char Pila::obtenerTope() {
 
-    char elemento = ' ';
+    char elemento = ELEMENTO_INVALIDO;
 
     if (! this->estaVacia()) {
 
