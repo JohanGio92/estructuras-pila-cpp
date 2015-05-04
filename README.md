@@ -1,35 +1,35 @@
-Algoritmos y Programaci贸n 2 - FI UBA
+Algoritmos y Programaci髇 2 - FI UBA
 
-# Estructura Din谩mica de Datos: Pila
+# Estructura Din醡ica de Datos: Pila
 
-## Marco Te贸rico
+## Marco Te髍ico
 
 ### Estructura de Datos
 
-Una estructura de datos es una colecci贸n de elementos cuya organizaci贸n 
-l贸gica refleja una relaci贸n entre ellos.
+Una estructura de datos es una colecci髇 de elementos cuya organizaci髇 
+l骻ica refleja una relaci髇 entre ellos.
     
 Se caracterizan por las operaciones de acceso que se utilizan para almacenar
 y recuperar los elementos individuales.
 
-### Estructura de Datos Est谩tica
+### Estructura de Datos Est醫ica
 
-La estructura l贸gica de los elementos que la componen permanece invariante 
-a lo largo de toda su utilizaci贸n. Ejemplo: Array
+La estructura l骻ica de los elementos que la componen permanece invariante 
+a lo largo de toda su utilizaci髇. Ejemplo: Array
 
-### Estructura de Datos Din谩mica
+### Estructura de Datos Din醡ica
 
-La estructura l贸gica de los elementos que la componen sufre modificaciones
-a lo largo de su utilizaci贸n. Ejemplos: Lista, Pila, Cola.
+La estructura l骻ica de los elementos que la componen sufre modificaciones
+a lo largo de su utilizaci髇. Ejemplos: Lista, Pila, Cola.
 
 ### Pila    
     
-Una Pila es una estructura din谩mica de datos organizada de acuerdo al principio 
+Una Pila es una estructura din醡ica de datos organizada de acuerdo al principio 
 **LIFO** (*Last In - First Out*)
 
 El 煤ltimo elemento en entrar es el primer elemento en salir.
 
-S贸lo permite el acceso al elemento que denomina tope.
+S髄o permite el acceso al elemento que denomina tope.
 
 ### Operaciones
 
@@ -49,29 +49,29 @@ S贸lo permite el acceso al elemento que denomina tope.
 
 ## Enunciado
  
-1. Dise帽ar la interfaz del TDA Pila de Caracteres.
+1. Dise馻r la interfaz del TDA Pila de Caracteres.
 
-2. Desarrollar una implementaci贸n *est谩tica* del TDA Pila de Caracteres. 
+2. Desarrollar una implementaci髇 *est醫ica* del TDA Pila de Caracteres. 
 
-3. Cambiar la implementaci贸n est谩tica por una implementaci贸n *din谩mica* del TDA 
+3. Cambiar la implementaci髇 est醫ica por una implementaci髇 *din醡ica* del TDA 
 Pila de Caracteres.    
  
-4. Cambiar TDA Pila de Caracteres (interfaz e implementaci贸n) por un tipo
+4. Cambiar TDA Pila de Caracteres (interfaz e implementaci髇) por un tipo
 parametrizable (*template*): `Pila<T>`.
  
 ## Desarrollo
 
-1. Definici贸n de la interfaz de la clase `Pila`.
+1. Definici髇 de la interfaz de la clase `Pila`.
 
     * `Pila.h`: [Pila.h](../punto-01/src/Pila.h)
 
-2. Implementaci贸n de la clase `Pila` basada en un arreglo.
+2. Implementaci髇 de la clase `Pila` basada en un arreglo.
 
     * `Pila.h`: [Pila.h](../punto-02/src/Pila.h)
 
     * `Pila.cpp`: [Pila.cpp](../punto-02/src/Pila.cpp)
 
-3. Implementaci贸n de la clase `Pila` basada en nodos enlazados.
+3. Implementaci髇 de la clase `Pila` basada en nodos enlazados.
 
     * `Nodo.h`: [Nodo.h](../punto-03/src/Nodo.h)
 
@@ -81,7 +81,7 @@ parametrizable (*template*): `Pila<T>`.
 
     * `Pila.cpp`: [Pila.cpp](../punto-03/src/Pila.cpp)
 
-4. Implementaci贸n del template `Pila<T>` basada en nodos enlazados.
+4. Implementaci髇 del template `Pila<T>` basada en nodos enlazados.
 
     * `Nodo.h`: [Nodo.h](../punto-04/src/Nodo.h)
 
