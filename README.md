@@ -27,7 +27,7 @@ a lo largo de su utilización. Ejemplos: Lista, Pila, Cola.
 Una Pila es una estructura dinámica de datos organizada de acuerdo al principio 
 **LIFO** (*Last In - First Out*)
 
-El Ãºltimo elemento en entrar es el primer elemento en salir.
+El Último elemento en entrar es el primer elemento en salir.
 
 Sólo permite el acceso al elemento que denomina tope.
 
@@ -35,7 +35,7 @@ Sólo permite el acceso al elemento que denomina tope.
 
 * Crear
 
-* Esta vacÃ­a?
+* Esta vací­a?
 
 * Apilar
 
