@@ -81,6 +81,11 @@ parametrizable (*template*): `Pila<T>`.
 
 * `Pila.cpp`: [Pila.cpp](../punto-03/src/Pila.cpp)
 
+4. Implementación del template `Pila<T>` basada en nodos enlazados.
+
+* `Nodo.h`: [Nodo.h](../punto-04/src/Nodo.h)
+
+* `Pila.h`: [Pila.h](../punto-04/src/Pila.h)
 
 [pila]: http://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Pila.svg/391px-Pila.svg.png "Pila"
 
