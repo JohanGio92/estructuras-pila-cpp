@@ -59,6 +59,9 @@ Pila de Caracteres.
 4. Cambiar TDA Pila de Caracteres (interfaz e implementación) por un tipo
 parametrizable (*template*): `Pila<T>`.
  
+5. Utilizar *excepciones* para manipular condiciones anómalas durante la 
+utilización de `Pila<T>`. 
+ 
 ## Desarrollo
 
 1. Definición de la interfaz de la clase `Pila`.
@@ -86,6 +89,14 @@ parametrizable (*template*): `Pila<T>`.
     * `Nodo.h`: [Nodo.h](../punto-04/src/Nodo.h)
 
     * `Pila.h`: [Pila.h](../punto-04/src/Pila.h)
+    
+5. Implementación del template `Pila<T>` basada en nodos enlazados, utilizando
+excepciones.
+
+    * `Nodo.h`: [Nodo.h](../punto-05/src/Nodo.h)
+
+    * `Pila.h`: [Pila.h](../punto-05/src/Pila.h)
+
 
 [pila]: http://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Pila.svg/391px-Pila.svg.png "Pila"
 
