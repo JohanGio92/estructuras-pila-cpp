@@ -1,6 +1,8 @@
 #ifndef PILA_H_
 #define PILA_H_
 
+#define MAXIMO 100000
+
 /*
  * Una Pila es una estructura dinámica de datos organizada de acuerdo al
  * principio LIFO (Last In - First Out).
@@ -11,6 +13,12 @@
  *
  */
 class Pila {
+
+    private:
+
+        char elementos[MAXIMO];
+
+        int tope;
 
     public:
 
